@@ -6,7 +6,7 @@ const PartecipanteCard = ({ nome, cognome, codice_fiscale, telefono, email, inde
             <div className="accordion-item">
                 <h2 className="accordion-header" id={`heading-${index}`}>
                     <button
-                        className="accordion-button"
+                        className="accordion-button collapsed bg-white"
                         type="button"
                         data-bs-toggle="collapse"
                         data-bs-target={`#collapse-${index}`}
@@ -21,7 +21,7 @@ const PartecipanteCard = ({ nome, cognome, codice_fiscale, telefono, email, inde
                     className="accordion-collapse collapse"
                     aria-labelledby={`heading-${index}`}
                 >
-                    <div className="accordion-body">
+                    <div className="info accordion-body">
                         <ul>
                             <li>Codice Fiscale: {codice_fiscale}</li>
                             <li>Telefono: {telefono}</li>
