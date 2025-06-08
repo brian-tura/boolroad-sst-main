@@ -16,20 +16,20 @@ import tripContext from "./contexts/TripContext";
       accompagnatori: ["Giulia Ferri", "Marco Neri"],
       partecipanti: [
         {
+          id: 1,
           nome: "Mario",
           cognome: "Rossi",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         },
         {
-          nome: "Mario",
-          cognome: "Rossi",
+          id: 2,
+          nome: "Paolo",
+          cognome: "Casadei",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         }]
     },
     {
@@ -43,20 +43,20 @@ import tripContext from "./contexts/TripContext";
       accompagnatori: ["Francesca Rossi"],
       partecipanti: [
         {
+          id: 1,
           nome: "Mario",
           cognome: "Rossi",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         },
         {
-          nome: "Mario",
-          cognome: "Rossi",
+          id: 2,
+          nome: "Paolo",
+          cognome: "Casadei",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         }]
     },
     {
@@ -70,20 +70,20 @@ import tripContext from "./contexts/TripContext";
       accompagnatori: ["Lucia Verdi", "Andrea Gallo"],
       partecipanti: [
         {
+          id: 1,
           nome: "Mario",
           cognome: "Rossi",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         },
         {
-          nome: "Mario",
-          cognome: "Rossi",
+          id: 2,
+          nome: "Paolo",
+          cognome: "Casadei",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         }]
     },
     {
@@ -97,20 +97,20 @@ import tripContext from "./contexts/TripContext";
       accompagnatori: ["Federico Romano"],
       partecipanti: [
         {
+          id: 1,
           nome: "Mario",
           cognome: "Rossi",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         },
         {
-          nome: "Mario",
-          cognome: "Rossi",
+          id: 2,
+          nome: "Paolo",
+          cognome: "Casadei",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         }]
     },
     {
@@ -124,20 +124,20 @@ import tripContext from "./contexts/TripContext";
       accompagnatori: ["Chiara De Luca"],
       partecipanti: [
         {
+          id: 1,
           nome: "Mario",
           cognome: "Rossi",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         },
         {
-          nome: "Mario",
-          cognome: "Rossi",
+          id: 2,
+          nome: "Paolo",
+          cognome: "Casadei",
           codice_fiscale: "RSSMRA97A16700Q",
           telefono: 1234567890,
-          email: "example@gmail.com",
-          numero_emergenza: 9876543210
+          email: "example@gmail.com"
         }]
     }
   ];

@@ -11,15 +11,34 @@ const TripDetail = () => {
 
     const [trip, setTrip] = useState({})
 
-    useEffect(() => {
+    const [searchInput, setSearchInput] = useState("")
 
+    const [partecipantiFiltrati, setPartecipantiFiltrati] = useState([])
+
+    useEffect(() => {
         const foundTrip = viaggi.find((viaggio) => (viaggio.id.toString() === id))
 
         if (foundTrip) {
             setTrip(foundTrip)
+            setPartecipantiFiltrati(foundTrip.partecipanti)
         }
     }, [])
 
+
+    const handleChange = (e) => {
+        e.preventDefault();
+        setSearchInput(e.target.value)
+    }
+
+    useEffect(() => {
+        if (trip.partecipanti) {
+            const filtered = trip.partecipanti.filter((partecipante) => {
+                const fullName = `${partecipante.nome} ${partecipante.cognome}`.toLowerCase()
+                return fullName.includes(searchInput.toLowerCase())
+            })
+            setPartecipantiFiltrati(filtered)
+        }
+    }, [searchInput, trip.partecipanti])
 
     return (
         <>
@@ -27,16 +46,13 @@ const TripDetail = () => {
             <h4 className='tripTitle'>{`Partecipanti alla gita a ${trip.nome}`}</h4>
             <div className="input-group">
                 <div className="form-outline d-flex" >
-                    <input type="text" placeholder='Cerca partecipante...' className="form-control border border-2 border-primary rounded-0 rounded-start" />
-                    <button type="submit" className="btn btn-primary rounded-0 rounded-end">
-                        <i className="fas fa-search" /> Cerca
-                    </button>
+                    <input type="text" placeholder='Cerca partecipante...' onChange={handleChange} value={searchInput} className="form-control border border-2 border-primary rounded-0 rounded-start" />
                 </div>
             </div>
             <hr />
-            {trip.partecipanti && trip.partecipanti.map((partecipante) => {
+            {partecipantiFiltrati && partecipantiFiltrati.map((partecipante) => {
                 return (
-                    <PartecipanteCard nome={partecipante.nome} cognome={partecipante.cognome} codice_fiscale={partecipante.codice_fiscale} telefono={partecipante.telefono} email={partecipante.email} numero_emergenza={partecipante.numero_emergenza} />
+                    <PartecipanteCard nome={partecipante.nome} cognome={partecipante.cognome} codice_fiscale={partecipante.codice_fiscale} telefono={partecipante.telefono} email={partecipante.email} index={partecipante.id} />
                 )
             })}
             <Link to={`/viaggi`}>
