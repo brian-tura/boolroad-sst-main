@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import tripContext from "../contexts/TripContext"
-import { Link } from "react-router-dom"
+import TripCard from "../components/TripCard"
 
 
 const Homepage = () => {
@@ -12,21 +12,8 @@ const Homepage = () => {
       <div className="col-12 text-end">
         <h1 className="fw-semibold text-white">Gite in corso</h1>
       </div>
-      {viaggi.map(elem => (
-        <div className="col-12">
-          <div className="card">
-            <div className="card-body">
-              <Link className="link-trip" to={`/viaggi/${elem.id}`}>
-                <h3 className="card-title">{elem.nome}</h3>
-              </Link>
-              <h6 className="card-title fw-semibold">{elem.luogo}</h6>
-              <div className="card-text">
-                <i className="fa-regular fa-calendar me-1"></i>{elem.data_partenza}
-                <i className="fa-regular fa-calendar ms-5 me-1"></i>{elem.data_arrivo}
-              </div>
-            </div>
-          </div>
-        </div>
+      {viaggi.map((viaggio) => (
+        <TripCard id={viaggio.id} nome={viaggio.nome} luogo={viaggio.luogo} data_partenza={viaggio.data_partenza} data_arrivo={viaggio.data_arrivo} />
       ))}
     </div>
   )
