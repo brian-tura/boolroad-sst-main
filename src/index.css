@@ -1,0 +1,40 @@
+body {
+  background-color: gray !important;
+}
+
+.bg-main {
+  background-color: #023275;
+}
+
+#header-logo {
+  width: 60px;
+  aspect-ratio: 1/1;
+}
+
+.card {
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transition: 0.3s;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.tripTitle {
+  text-align: right;
+  margin: 30px, 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.link-trip {
+  text-decoration: none;
+  color: black;
+}
+
+.link-trip:hover{
+  text-decoration: underline;
+}
