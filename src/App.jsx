@@ -178,7 +178,7 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
-              <Route path="/viaggi" element={<Homepage />} />
+              <Route index element={<Homepage />} />
               <Route path="/viaggi/:id" element={<TripDetail />} />
             </Route>
           </Routes>
