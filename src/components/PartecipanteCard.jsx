@@ -13,7 +13,7 @@ const PartecipanteCard = ({nome, cognome, codice_fiscale, telefono, email, numer
                                     aria-expanded="true"
                                     aria-controls="collapseOne"
                                 >
-                                    <p>{nome} {cognome}</p>
+                                    <p>{nome} {cognome} </p>
                                 </button>
                             </h2>
                             <div
